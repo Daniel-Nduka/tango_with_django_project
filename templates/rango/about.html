@@ -1,0 +1,24 @@
+{% extends 'rango/base.html' %}
+{% load staticfiles %}
+
+{% block title_block %}
+    About Rango
+{% endblock %}
+{% block body_block %}
+    <h1>Rango says...</h1>
+    <div>
+        here is the about page. <br />
+        <strong>{{ boldmessage }}</strong><br />
+	 <p>Visits: {{ visits }}</p>  <!-- Add this line to display the number of visits -->
+    </div>
+    <div>
+        <a href="{% url 'rango:about' %}">About</a>
+
+        <!-- Static Image of Rango -->
+        <img src="{% static 'images/rango.jpg' %}" alt="Picture of Rango" /> <!-- New line -->
+
+        <!-- Media Image of a Cat -->
+        <img src="{{ MEDIA_URL }}cat.jpg" alt="Picture of a Cat" /> <!-- Replace 'cat.jpg' with your actual media file name -->
+
+    </div>
+{% endblock %}
