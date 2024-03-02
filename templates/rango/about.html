@@ -5,9 +5,13 @@
     About Rango
 {% endblock %}
 {% block body_block %}
-    <h1>Rango says...</h1>
+<div class="jumbotron p-4">
+<div class="container">
+    <h1 class="jumbotron-heading">Rango says...</h1>
     <div>
-        here is the about page. <br />
+	<h2 class="h2">
+        here is the about page. 
+	</h2>
         <strong>{{ boldmessage }}</strong><br />
 	 <p>Visits: {{ visits }}</p>  <!-- Add this line to display the number of visits -->
     </div>
